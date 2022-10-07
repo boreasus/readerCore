@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../controller/homePageController.dart';
+import '../../../controller/homePageController.dart';
 import './newsCard.dart';
 
 class NewsListView extends StatelessWidget {

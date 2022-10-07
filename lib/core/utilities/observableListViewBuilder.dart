@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../constant.dart';
+import 'constant.dart';
 
 class ObservableListView extends StatelessWidget {
   const ObservableListView({

@@ -1,7 +1,7 @@
 import 'package:get/state_manager.dart';
 import 'package:new_project/core/model/News.dart';
 import 'package:new_project/core/services/Services.dart';
-import '../constant.dart';
+import '../utilities/constant.dart';
 
 class HomePageController extends GetxController {
   final Rx<AppState> _connectionState = AppState.initial.obs;
@@ -9,6 +9,7 @@ class HomePageController extends GetxController {
 
   final RxString _searchController = "".obs;
   RxString get searchController => _searchController;
+
   void setSearchController(value) {
     _searchController.value = value;
   }

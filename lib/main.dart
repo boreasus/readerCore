@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:new_project/core/view/pages/homePage.dart';
-import 'package:new_project/core/view/pages/muhammed.dart';
+import 'package:new_project/core/view/homePage/pages/homePage.dart';
+import 'package:new_project/core/view/loginPage/pages/login.dart';
+import 'package:new_project/core/view/utilitiesPage/Utilities.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +15,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
+      title: 'Reeder App',
       theme: ThemeData(
+        fontFamily: 'Mark-Pro',
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const LoginPage(),
     );
   }
 }

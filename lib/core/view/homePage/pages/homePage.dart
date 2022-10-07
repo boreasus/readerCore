@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
 import 'package:new_project/core/controller/homePageController.dart';
-import '../../utilities/observableListViewBuilder.dart';
+import '../../../utilities/observableListViewBuilder.dart';
 import '../widgets/newsListView.dart';
 import '../widgets/homePageTextField.dart';
 
