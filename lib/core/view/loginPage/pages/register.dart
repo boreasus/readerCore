@@ -77,13 +77,13 @@ class _RegisterState extends State<Register> {
                     child: Text.rich(TextSpan(
                         text: 'Kullanıcı sözleşmesini',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, color: appGreyDarkest),
+                            fontWeight: FontWeight.bold, color: appSecondary4),
                         children: <TextSpan>[
                           TextSpan(
                               text: ' okudum, onaylıyorum.',
                               style: TextStyle(
                                   fontWeight: FontWeight.normal,
-                                  color: appGreyDarkest))
+                                  color: appSecondary4))
                         ])),
                   ),
                 ],
@@ -109,13 +109,13 @@ class _RegisterState extends State<Register> {
                     child: Text.rich(TextSpan(
                         text: 'KVKK sözleşmesini',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, color: appGreyDarkest),
+                            fontWeight: FontWeight.bold, color: appSecondary4),
                         children: <TextSpan>[
                           TextSpan(
                               text: ' okudum, onaylıyorum.',
                               style: TextStyle(
                                   fontWeight: FontWeight.normal,
-                                  color: appGreyDarkest))
+                                  color: appSecondary4))
                         ])),
                   ),
                 ],
@@ -131,7 +131,7 @@ class _RegisterState extends State<Register> {
                 children: [
                   Text(
                     'Hesabınız var mı? ',
-                    style: TextStyle(color: appGreyDarkest),
+                    style: TextStyle(color: appSecondary4),
                   ),
                   GestureDetector(
                     onTap: (() {

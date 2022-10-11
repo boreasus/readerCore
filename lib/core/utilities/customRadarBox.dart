@@ -30,7 +30,7 @@ class CustomCheckBox extends StatelessWidget {
             border: Border.all(
                 width: 1,
                 color: controller.customCheckBox[index].value == false
-                    ? appGreyDarkest
+                    ? appSecondary4
                     : appPrimary)),
         width: 20,
         height: 20,

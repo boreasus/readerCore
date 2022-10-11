@@ -31,8 +31,8 @@ class InputFieldDoubleIcon extends StatelessWidget {
           autocorrect: false,
           controller: textInput,
           decoration: InputDecoration(
-              prefixIconColor: appGreyDarkest,
-              suffixIconColor: appGreyDarkest,
+              prefixIconColor: appSecondary4,
+              suffixIconColor: appSecondary4,
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: appPrimary),
               ),

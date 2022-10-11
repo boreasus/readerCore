@@ -11,9 +11,17 @@ class WidgetController extends GetxController {
   }
   /////////////
 
+  ///CHECKBOX CONTROLLER AT LOGIN PAGE
   final List<RxBool> _customCheckBox = [false.obs, false.obs];
   List<RxBool> get customCheckBox => _customCheckBox;
   void changeStateOfcheckBoxController(val) {
     _customCheckBox[val].value = !_customCheckBox[val].value;
+  }
+
+  //BOTTOM NAVIGATION BAR CONTROLLER
+  final RxInt _selectedIndex = 0.obs;
+  RxInt get selectedIndex => _selectedIndex;
+  void changeStateOfBottomNavigationBar(val) {
+    _selectedIndex.value = val;
   }
 }

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:new_project/core/view/homePage/pages/homePage.dart';
+import 'package:new_project/core/view/navigation/pages/bottomNavigationBarWidget.dart';
 import 'package:new_project/core/view/loginPage/pages/login.dart';
-import 'package:new_project/core/view/utilitiesPage/Utilities.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Mark-Pro',
         primarySwatch: Colors.blue,
       ),
-      home: const LoginPage(),
+      home: const BottomNavigationBarWidget(),
     );
   }
 }

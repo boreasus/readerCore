@@ -21,7 +21,7 @@ class InputFieldSingleIcon extends StatelessWidget {
       child: TextField(
         controller: text,
         decoration: InputDecoration(
-            prefixIconColor: appGreyDarkest,
+            prefixIconColor: appSecondary4,
             focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(color: appPrimary),
             ),
