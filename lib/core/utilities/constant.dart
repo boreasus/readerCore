@@ -9,7 +9,7 @@ Color appPrimary = const Color(0xFF78D62B);
 Color appPrimary2 = const Color(0xFF051C2C);
 Color appGreySoftest = const Color(0XffF8F8F8);
 Color appGreySofter = const Color(0xFFEEEEEE);
-Color appGreyDarker = const Color(0xFFC9C9C9);
+Color appSecondary2 = const Color(0xFFC9C9C9);
 Color appSecondary4 = const Color(0xFFA1A1A1);
 Color appYellow = const Color(0xFFEBBC43);
 

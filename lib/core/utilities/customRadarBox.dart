@@ -5,8 +5,8 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
-import 'package:new_project/core/controller/widgetController.dart';
 import 'package:new_project/core/utilities/constant.dart';
+import 'package:new_project/src/controller/widgetController.dart';
 
 class CustomCheckBox extends StatelessWidget {
   final index;

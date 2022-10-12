@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:new_project/core/model/News.dart';
+import 'package:new_project/src/model/News.dart';
 
 class Services {
   final baseUrl = 'https://newsapi.org/v2/';

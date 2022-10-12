@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:new_project/core/utilities/constant.dart';
-import './constant.dart';
 
 class InputFieldSingleIcon extends StatelessWidget {
   final double pageWidth;
@@ -27,7 +26,7 @@ class InputFieldSingleIcon extends StatelessWidget {
             ),
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
             hintText: message,
-            hintStyle: TextStyle(fontSize: 14, color: appGreyDarker),
+            hintStyle: TextStyle(fontSize: 14, color: appSecondary2),
             prefixIcon: SizedBox(width: 17, height: 17, child: icon)),
       ),
     );

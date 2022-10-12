@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:new_project/core/view/navigation/pages/bottomNavigationBarWidget.dart';
-import 'package:new_project/core/view/loginPage/pages/login.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:new_project/src/view/navigation/pages/bottomNavigationBarWidget.dart';
 
-void main() {
+void main() async {
+  await GetStorage.init();
   runApp(const MyApp());
 }
 

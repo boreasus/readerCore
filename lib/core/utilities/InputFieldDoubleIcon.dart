@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
-import 'package:new_project/core/controller/widgetController.dart';
 import 'package:new_project/core/utilities/constant.dart';
+import 'package:new_project/src/controller/widgetController.dart';
 
 class InputFieldDoubleIcon extends StatelessWidget {
   final double pageWidth;
@@ -39,7 +39,7 @@ class InputFieldDoubleIcon extends StatelessWidget {
               border:
                   OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
               hintText: message,
-              hintStyle: TextStyle(fontSize: 14, color: appGreyDarker),
+              hintStyle: TextStyle(fontSize: 14, color: appSecondary2),
               prefixIcon: SizedBox(width: 17, height: 17, child: iconLeft),
               suffixIcon: GestureDetector(
                   onTap: () {
