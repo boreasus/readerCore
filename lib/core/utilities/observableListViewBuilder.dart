@@ -18,9 +18,9 @@ class ObservableListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(child: Obx(() {
-      if (controller.connectionState.value == AppState.loaded) {
+      if (controller.connectionState.value == RequestState.loaded) {
         return widgetLoaded;
-      } else if (controller.connectionState.value == AppState.loading) {
+      } else if (controller.connectionState.value == RequestState.loading) {
         return widgetLoading;
       } else {
         return widgetFailed;

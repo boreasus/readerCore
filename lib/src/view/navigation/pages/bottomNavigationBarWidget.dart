@@ -1,6 +1,7 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:local_hero/local_hero.dart';
 import 'package:new_project/src/controller/widgetController.dart';
 import 'package:new_project/src/view/accountPage/pages/accountPage.dart';
 import 'package:new_project/src/view/chatPage/pages/chatPage.dart';
@@ -28,7 +29,8 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
       drawer: const customDrawer(),
       appBar: customAppBar(widgetController),
       body: Obx(() => widgetOptions[widgetController.selectedIndex.value]),
-      bottomNavigationBar: const CustomBottomNavigationBarWidget(),
+      bottomNavigationBar:
+          const LocalHeroScope(child: CustomBottomNavigationBarWidget()),
     );
   }
 }
@@ -48,25 +50,28 @@ class CustomBottomNavigationBarWidget extends StatelessWidget {
           'assets/icons/homePageOutlined.png',
         ),
         index: 0,
+        id: "1",
       ),
       faultPage: CustomBottomNavigationBarItem(
         text: 'Arıza İşlemleri',
         icon: AssetImage('assets/icons/faults.png'),
         outlinedIcon: AssetImage('assets/icons/faultsOutlined.png'),
         index: 1,
+        id: "2",
       ),
       chatPage: CustomBottomNavigationBarItem(
         text: 'Mesaj',
         icon: AssetImage('assets/icons/chat.png'),
         outlinedIcon: AssetImage('assets/icons/chatOutlined.png'),
         index: 2,
+        id: "3",
       ),
       accountPage: CustomBottomNavigationBarItem(
-        text: 'Hesap',
-        icon: AssetImage('assets/icons/account.png'),
-        outlinedIcon: AssetImage('assets/icons/accountOutlined.png'),
-        index: 3,
-      ),
+          text: 'Hesap',
+          icon: AssetImage('assets/icons/account.png'),
+          outlinedIcon: AssetImage('assets/icons/accountOutlined.png'),
+          index: 3,
+          id: "4"),
     );
   }
 }

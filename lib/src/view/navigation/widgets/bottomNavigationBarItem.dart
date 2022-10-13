@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:local_hero/local_hero.dart';
 import 'package:new_project/core/utilities/constant.dart';
 import 'package:new_project/src/controller/widgetController.dart';
 
@@ -8,12 +9,14 @@ class CustomBottomNavigationBarItem extends StatelessWidget {
   final AssetImage icon;
   final AssetImage outlinedIcon;
   final int index;
+  final String id;
   const CustomBottomNavigationBarItem({
     super.key,
     required this.text,
     required this.icon,
     required this.outlinedIcon,
     required this.index,
+    required this.id,
   });
 
   @override
@@ -26,16 +29,19 @@ class CustomBottomNavigationBarItem extends StatelessWidget {
         LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
           return Obx(
-            () => Container(
-              decoration: BoxDecoration(
-                  color: controller.selectedIndex.value == index
-                      ? appPrimary
-                      : Colors.white,
-                  borderRadius: const BorderRadius.only(
-                      bottomLeft: Radius.circular(5),
-                      bottomRight: Radius.circular(5))),
-              width: constraints.maxWidth / 2,
-              height: 5,
+            () => LocalHero(
+              tag: id,
+              child: Container(
+                decoration: BoxDecoration(
+                    color: controller.selectedIndex.value == index
+                        ? appPrimary
+                        : Colors.white,
+                    borderRadius: const BorderRadius.only(
+                        bottomLeft: Radius.circular(5),
+                        bottomRight: Radius.circular(5))),
+                width: constraints.maxWidth / 2,
+                height: 5,
+              ),
             ),
           );
         }),

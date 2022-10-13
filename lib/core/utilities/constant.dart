@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
 
-enum AppState { initial, loading, loaded, error, empty, disabled }
+enum RequestState { initial, loading, loaded, error, empty, disabled }
 
+enum TechnicState {
+  accepted,
+  reparing,
+  repaired,
+  givingDelivery,
+  givedDelivery,
+  delivering,
+  delivered,
+}
+
+Color appButtonFade4 = const Color(0xFFEBBC43);
 Color appButtonFade3 = const Color(0xFFEB5343);
 Color appButtonFade2 = const Color(0xFF1B6FC8);
 Color appButtonFade1 = const Color(0xFF00A487);
@@ -20,3 +31,7 @@ int body1 = 20;
 int body2 = 14;
 int body3 = 14;
 int body4 = 12;
+
+
+
+//temp

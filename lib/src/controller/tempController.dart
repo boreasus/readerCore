@@ -4,8 +4,8 @@ import 'package:new_project/core/utilities/constant.dart';
 import 'package:new_project/src/model/News.dart';
 
 class tempController extends GetxController {
-  final Rx<AppState> _connectionState = AppState.initial.obs;
-  Rx<AppState> get connectionState => _connectionState;
+  final Rx<RequestState> _connectionState = RequestState.initial.obs;
+  Rx<RequestState> get connectionState => _connectionState;
 
   final RxString _searchController = "".obs;
   RxString get searchController => _searchController;
@@ -20,12 +20,12 @@ class tempController extends GetxController {
   @override
   void onInit() async {
     super.onInit();
-    _connectionState.value = AppState.loading;
+    _connectionState.value = RequestState.loading;
     try {
       _articles.value = await Services().newsApi() ?? [];
-      _connectionState.value = AppState.loaded;
+      _connectionState.value = RequestState.loaded;
     } catch (e) {
-      _connectionState.value = AppState.error;
+      _connectionState.value = RequestState.error;
     }
   }
 }

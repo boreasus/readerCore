@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:new_project/core/utilities/constant.dart';
+import 'package:new_project/core/utilities/period.dart';
+import 'package:new_project/src/model/Faults.dart';
 
-class HomePageFaultBottomCard extends StatelessWidget {
+class FaultCard extends StatelessWidget {
   final index;
   final constraints;
-  const HomePageFaultBottomCard(
-      {super.key, required this.constraints, required this.index});
+  final Faults faults;
+  const FaultCard(
+      {super.key,
+      required this.constraints,
+      required this.index,
+      required this.faults});
 
   @override
   Widget build(BuildContext context) {
@@ -33,27 +39,30 @@ class HomePageFaultBottomCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'İşlem $index',
+                      'İşlem ${index + 1}',
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Text(
-                      '22.08.2022',
+                      faults.date,
                       style: TextStyle(color: appSecondary4),
                     ),
-                    SizedBox(height: 10),
-                    Text(
-                        'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
+                    Text(faults.content),
+                    const SizedBox(height: 10),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        Period(
+                          isVisible: faults.situation == "Teknik Servis",
+                          periodSituation: faults.technicState ?? 0,
+                        ),
                         Text(
-                          'İşleme Alındı',
+                          faults.situation,
                           style: TextStyle(
                             decoration: TextDecoration.underline,
-                            color: appButtonFade1,
+                            color: faults.Color(),
                             fontWeight: FontWeight.bold,
                           ),
                         ),
